@@ -3,6 +3,7 @@ import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
 function NotFoundComponent() {
   return (
@@ -36,6 +37,7 @@ export const Route = createRootRoute({
       <main className="flex-1"><Outlet /></main>
       <Footer />
       <Toaster />
+      <WhatsAppFab />
     </div>
   ),
   notFoundComponent: NotFoundComponent,
