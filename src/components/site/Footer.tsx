@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
     <footer className="border-t border-border/60 mt-24">
       <div className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-4">
         <div>
-          <div className="font-display text-lg font-bold">INFINI<span className="text-gradient">BOOST</span></div>
+          <img src={logo} alt="INFINI BOOST" className="h-10 w-auto" />
           <p className="mt-3 text-sm text-muted-foreground max-w-xs">
             SEO & digital marketing agency based in Tangier, Morocco. Driving sustainable growth.
           </p>
