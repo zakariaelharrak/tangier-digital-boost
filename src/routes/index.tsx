@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, TrendingUp, Target, Sparkles, BarChart3, Globe2, Star } from "lucide-react";
+import { Reviews } from "@/components/site/Reviews";
+import { Newsletter } from "@/components/site/Newsletter";
+import { WhatsAppSection } from "@/components/site/WhatsAppSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -87,6 +90,12 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <Reviews />
+
+      <WhatsAppSection />
+
+      <Newsletter />
 
       {/* CTA */}
       <section className="container mx-auto px-6 pb-24">
