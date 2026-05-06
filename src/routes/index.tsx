@@ -91,6 +91,12 @@ function Home() {
         </div>
       </section>
 
+      <Reviews />
+
+      <WhatsAppSection />
+
+      <Newsletter />
+
       {/* CTA */}
       <section className="container mx-auto px-6 pb-24">
         <div className="relative overflow-hidden rounded-3xl border border-border/60 p-12 md:p-16 text-center" style={{ background: "var(--gradient-hero)" }}>
