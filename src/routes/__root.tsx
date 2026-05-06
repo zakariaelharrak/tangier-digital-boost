@@ -2,6 +2,7 @@ import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/r
 import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -34,6 +35,7 @@ export const Route = createRootRoute({
       <Header />
       <main className="flex-1"><Outlet /></main>
       <Footer />
+      <Toaster />
     </div>
   ),
   notFoundComponent: NotFoundComponent,
