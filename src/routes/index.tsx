@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, TrendingUp, Target, Sparkles, BarChart3, Globe2, Star } from "lucide-react";
 import { Reviews } from "@/components/site/Reviews";
 import { Newsletter } from "@/components/site/Newsletter";
 import { WhatsAppSection } from "@/components/site/WhatsAppSection";
+import { MapSection } from "@/components/site/MapSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,39 +30,39 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-40" />
+        <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
-        <div className="container mx-auto relative px-6 pt-20 pb-28 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/40 px-3 py-1 text-xs text-muted-foreground backdrop-blur">
-              <Star className="h-3 w-3 fill-primary text-primary" /> 5.0 rated agency · Tangier, Morocco
-            </div>
-            <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-[1.05]">
-              Marketing that <span className="text-gradient">compounds</span> growth.
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              INFINI BOOST is a data-driven SEO & digital marketing agency. We craft full-funnel strategies that lift brands from invisible to inevitable.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="text-primary-foreground" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
-                <Link to="/contact">Start a project <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-border bg-card/30 backdrop-blur">
-                <Link to="/services">Explore services</Link>
-              </Button>
-            </div>
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-              {[["+180%", "Avg. organic lift"], ["24/7", "Always-on team"], ["5.0★", "Google rated"]].map(([k, v]) => (
-                <div key={k}>
-                  <div className="text-2xl font-display font-bold text-gradient">{k}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{v}</div>
-                </div>
-              ))}
-            </div>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full opacity-40 blur-3xl pointer-events-none" style={{ background: "var(--gradient-hero)" }} />
+
+        <div className="container mx-auto relative px-6 pt-24 pb-32 flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/40 px-4 py-1.5 text-xs text-muted-foreground backdrop-blur">
+            <Star className="h-3 w-3 fill-primary text-primary" /> 5.0 rated agency · Tangier, Morocco
           </div>
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-3xl opacity-60 blur-3xl" style={{ background: "var(--gradient-hero)" }} />
-            <img src={heroImg} alt="Digital growth visualization" width={1600} height={1000} className="relative rounded-3xl border border-border/60 shadow-2xl" />
+
+          <h1 className="mt-8 text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] max-w-5xl tracking-tight">
+            Marketing that <span className="text-gradient">compounds</span> growth.
+          </h1>
+
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            INFINI BOOST is a data-driven SEO & digital marketing agency. We craft full-funnel strategies that lift brands from invisible to inevitable.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-3 justify-center">
+            <Button asChild size="lg" className="text-primary-foreground" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
+              <Link to="/contact">Start a project <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-border bg-card/30 backdrop-blur">
+              <Link to="/services">Explore services</Link>
+            </Button>
+          </div>
+
+          <div className="mt-16 grid grid-cols-3 gap-8 md:gap-16">
+            {[["+180%", "Avg. organic lift"], ["24/7", "Always-on team"], ["5.0★", "Google rated"]].map(([k, v]) => (
+              <div key={k}>
+                <div className="text-3xl md:text-4xl font-display font-bold text-gradient">{k}</div>
+                <div className="text-xs md:text-sm text-muted-foreground mt-2">{v}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
